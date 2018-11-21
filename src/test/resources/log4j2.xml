@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+  
+  <Properties>
+        <Property name="LOG_DIR">${sys:web.root}/logs</Property>
+        <Property name="ARCHIVE">${LOG_DIR}/archive</Property>
+        <Property name="PATTERN">[%-5level] %d{yyyyMMdd-HH:mm:ss} [%t]  %logger{36} - %msg%n</Property>
+  </Properties>
+  
+  <Appenders>
+        
+    <Console name="Console" target="SYSTEM_OUT">		
+		<PatternLayout pattern="${PATTERN}"/>
+	</Console>     
+    
+    <File name="MyFile" fileName="c:logs/app.log" immediateFlush="false" append="false">
+      <PatternLayout pattern="${PATTERN}"/>       
+    </File>
+    
+  </Appenders>  
+ <Loggers>   
+   	<Logger name="org.apache.log4j.xml" level="info"/>
+    <Root level="all">
+      <AppenderRef ref="Console" level="all"/>
+      <AppenderRef ref="MyFile" level="all"/>
+    </Root>
+  </Loggers>
+
+ </Configuration>
