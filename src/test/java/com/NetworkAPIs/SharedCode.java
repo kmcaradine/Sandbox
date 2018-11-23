@@ -5,28 +5,42 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
+import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+
 import javax.ws.rs.core.MediaType;
+
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.lessThanOrEqualTo;
 
 public class SharedCode {
 
     static Logger log = LogManager.getLogger(SharedCode.class);
     private static Response response;
     private static final boolean PRINTERHEADER = true;
-
     public static ExtentHtmlReporter reporter;
     public static ExtentReports extent;
     public static ExtentTest test;
 
-    public static Response getTheResponse(String apiType, RequestSpecification requestSpec){
+    @BeforeSuite(alwaysRun = true)
+    public void setUp(){
+        setUpReport();
+    }
 
+    @AfterSuite(alwaysRun = true)
+    public void tearDown(){
+        //Send result to the Extent report
+        extent.flush();
+        RestAssured.reset();
+    }
+
+    public static Response getTheResponse(String apiType, RequestSpecification requestSpec){
         //API response time
-        long responseTime = 3000L;
+        //long responseTime = 3000L;
         switch(apiType.toLowerCase()){
             case "post": //<-- Post
                 response =
@@ -39,7 +53,7 @@ public class SharedCode {
                     when().
                         post().
                     then().
-                        time(lessThanOrEqualTo(responseTime)).
+                        //time(lessThanOrEqualTo(responseTime)).
                         log().
                         all().
                         extract().
@@ -56,7 +70,7 @@ public class SharedCode {
                     when().
                         get().
                     then().
-                        time(lessThanOrEqualTo(responseTime)).
+                       //time(lessThanOrEqualTo(responseTime)).
                         log().
                         all().
                         extract().
@@ -73,7 +87,7 @@ public class SharedCode {
                     when().
                         put().
                     then().
-                        time(lessThanOrEqualTo(responseTime)).
+                        //time(lessThanOrEqualTo(responseTime)).
                         log().
                         all().
                         extract().
@@ -90,7 +104,7 @@ public class SharedCode {
                     when().
                         patch().
                     then().
-                        time(lessThanOrEqualTo(responseTime)).
+                        //time(lessThanOrEqualTo(responseTime)).
                         log().
                         all().
                         extract().
@@ -107,7 +121,7 @@ public class SharedCode {
                     when().
                         delete().
                     then().
-                        time(lessThanOrEqualTo(responseTime)).
+                        //time(lessThanOrEqualTo(responseTime)).
                         log().
                         all().
                         extract().
