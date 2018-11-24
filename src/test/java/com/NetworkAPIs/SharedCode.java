@@ -15,6 +15,7 @@ import org.testng.annotations.BeforeSuite;
 
 import javax.ws.rs.core.MediaType;
 
+import static org.hamcrest.number.OrderingComparison.lessThanOrEqualTo;
 import static io.restassured.RestAssured.given;
 
 public class SharedCode {
@@ -40,20 +41,20 @@ public class SharedCode {
 
     public static Response getTheResponse(String apiType, RequestSpecification requestSpec){
         //API response time
-        //long responseTime = 3000L;
+        long responseTime = 3000L;
         switch(apiType.toLowerCase()){
             case "post": //<-- Post
                 response =
                     given().
                         spec(requestSpec).
                         contentType(MediaType.APPLICATION_JSON).
-                        accept(MediaType.APPLICATION_JSON).
+                        //accept(MediaType.APPLICATION_JSON).
                         log().
                         all().
                     when().
                         post().
                     then().
-                        //time(lessThanOrEqualTo(responseTime)).
+                        time(lessThanOrEqualTo(responseTime)).
                         log().
                         all().
                         extract().
@@ -64,13 +65,12 @@ public class SharedCode {
                     given().
                         spec(requestSpec).
                         contentType(MediaType.APPLICATION_JSON).
-                        accept(MediaType.APPLICATION_JSON).
                         log().
                         all().
                     when().
                         get().
                     then().
-                       //time(lessThanOrEqualTo(responseTime)).
+                        time(lessThanOrEqualTo(responseTime)).
                         log().
                         all().
                         extract().
@@ -81,13 +81,13 @@ public class SharedCode {
                     given().
                         spec(requestSpec).
                         contentType(MediaType.APPLICATION_JSON).
-                        accept(MediaType.APPLICATION_JSON).
+                        //accept(MediaType.APPLICATION_JSON).
                         log().
                         all().
                     when().
                         put().
                     then().
-                        //time(lessThanOrEqualTo(responseTime)).
+                        time(lessThanOrEqualTo(responseTime)).
                         log().
                         all().
                         extract().
@@ -98,13 +98,13 @@ public class SharedCode {
                     given().
                         spec(requestSpec).
                         contentType(MediaType.APPLICATION_JSON).
-                        accept(MediaType.APPLICATION_JSON).
+                        //accept(MediaType.APPLICATION_JSON).
                         log().
                         all().
                     when().
                         patch().
                     then().
-                        //time(lessThanOrEqualTo(responseTime)).
+                        time(lessThanOrEqualTo(responseTime)).
                         log().
                         all().
                         extract().
@@ -115,13 +115,13 @@ public class SharedCode {
                     given().
                         spec(requestSpec).
                         contentType(MediaType.APPLICATION_JSON).
-                        accept(MediaType.APPLICATION_JSON).
+                        //accept(MediaType.APPLICATION_JSON).
                         log().
                         all().
                     when().
                         delete().
                     then().
-                        //time(lessThanOrEqualTo(responseTime)).
+                        time(lessThanOrEqualTo(responseTime)).
                         log().
                         all().
                         extract().

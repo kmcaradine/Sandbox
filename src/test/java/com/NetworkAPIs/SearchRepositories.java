@@ -1,8 +1,10 @@
 package com.NetworkAPIs;
 
+import TestData.DataProviderClass;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
+import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -11,12 +13,11 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
-import java.lang.reflect.Method;
-
+import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.concurrent.TimeUnit.SECONDS;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.number.OrderingComparison.lessThanOrEqualTo;
+import static org.hamcrest.Matchers.lessThanOrEqualTo;
 
 public class SearchRepositories extends SharedCode {
 
@@ -26,10 +27,12 @@ public class SearchRepositories extends SharedCode {
     private String apiType = "";
     private String testName = "";
 
-    @Test
-    public void SearchRepositoriesTest(Method method){
+    @Test (dataProvider="SearchProvider",
+           dataProviderClass=DataProviderClass.class)
+    public void SearchRepositoriesTest(String tcName, String lang, String sort, String order,
+                                       String acceptHeader, int requestStatus){
         apiType = "get";
-        testName = method.getName();
+        testName = tcName;
 
         //Print header to console
         header(testName);
@@ -46,26 +49,37 @@ public class SearchRepositories extends SharedCode {
         requestSpecBuilder = new RequestSpecBuilder();
         requestSpecBuilder.setBaseUri(baseURI);
         requestSpecBuilder.setBasePath(basePath);
-        requestSpecBuilder.addQueryParam("q","tetris+language:assembly");
-        requestSpecBuilder.addQueryParam("sort","stars");
-        requestSpecBuilder.addQueryParam("order","desc");
+        if(acceptHeader.trim().length() > 0){
+            requestSpecBuilder.setAccept(acceptHeader);
+        }
+        if(lang.trim().length() > 0) {
+            requestSpecBuilder.addQueryParam("q", lang);
+        }
+        if(sort.trim().length() > 0) {
+            requestSpecBuilder.addQueryParam("sort", sort);
+        }
+        if(order.trim().length() > 0) {
+            requestSpecBuilder.addQueryParam("order", order);
+        }
         requestSpec = requestSpecBuilder.build();
 
         //Get API response
         response = getTheResponse(apiType, requestSpec);
 
         //Get response time and send the it to the report
-        long timeSeconds = response.timeIn(SECONDS);
-        test.log(Status.INFO, "Response Time: " + timeSeconds + " second(s)");
+        long timeSeconds = response.timeIn(MILLISECONDS);
+        test.log(Status.INFO, "Response Time: " + timeSeconds + " millisecond(s)");
+
+        //Send the response status code to the report
+        test.log(Status.INFO, "Response Status: " + response.statusCode() );
+        log.info("Response Status: " + response.statusCode());
 
         //Send the response body to the report
-        test.log(Status.INFO, "Response Body: " + response.body().asString());
+        //test.log(Status.INFO, "Response Body: " + response.body().asString());
 
         //Assert on api response
-        assertThat(response.statusCode(), is(HttpStatus.SC_OK));
-        //assertThat(response.contentType(), is(ContentType.JSON));
-        assertThat(timeSeconds, is(lessThanOrEqualTo(4L)));
-        log.info("Response Status: " + response.statusCode());
+        assertThat(response.statusCode(), is(requestStatus));
+        assertThat(timeSeconds, is(lessThanOrEqualTo(3000L)));
     }
 
     @AfterMethod(alwaysRun = true)

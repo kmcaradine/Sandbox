@@ -1,7 +1,28 @@
-[INFO ] 20181122-22:13:41 [main]  com.NetworkAPIs.SharedCode - 
+[INFO ] 20181123-20:48:53 [main]  com.NetworkAPIs.SharedCode - 
 ====================================================================================================
 ====> Test Case Name: 
 ====> Test Case Number: 
 ====> Method Name: SearchRepositoriesTest
 ====================================================================================================
-[INFO ] 20181122-22:13:43 [main]  com.NetworkAPIs.SharedCode - Response Status: 200
+[INFO ] 20181123-20:48:55 [main]  com.NetworkAPIs.SharedCode - Response Status: 200
+[INFO ] 20181123-20:48:55 [main]  com.NetworkAPIs.SharedCode - 
+====================================================================================================
+====> Test Case Name: 
+====> Test Case Number: 
+====> Method Name: SearchRepositoriesTest
+====================================================================================================
+[INFO ] 20181123-20:48:56 [main]  com.NetworkAPIs.SharedCode - Response Status: 200
+[INFO ] 20181123-20:48:56 [main]  com.NetworkAPIs.SharedCode - 
+====================================================================================================
+====> Test Case Name: 
+====> Test Case Number: 
+====> Method Name: SearchRepositoriesTest
+====================================================================================================
+[INFO ] 20181123-20:48:57 [main]  com.NetworkAPIs.SharedCode - Response Status: 200
+[INFO ] 20181123-20:48:57 [main]  com.NetworkAPIs.SharedCode - 
+====================================================================================================
+====> Test Case Name: 
+====> Test Case Number: 
+====> Method Name: No request language
+====================================================================================================
+[INFO ] 20181123-20:48:57 [main]  com.NetworkAPIs.SharedCode - Response Status: 422
