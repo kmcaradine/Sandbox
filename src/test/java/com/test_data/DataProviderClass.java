@@ -20,7 +20,7 @@ public class DataProviderClass {
         }
         else if(testCase.equalsIgnoreCase("SearchCommitsTest")) {
             return new Object[][]{
-                    {"Valid search", "repo/:octocat/Spoon-Knife+css", "", "","application/vnd.github.cloak-preview", 200}
+                    {"Valid search", "repo:octocat/Spoon-Knife+css", "", "","application/vnd.github.cloak-preview", 200}
             };
         }
         else if(testCase.equalsIgnoreCase("SearchCodeTest")) {
@@ -30,12 +30,13 @@ public class DataProviderClass {
         }
         else if(testCase.equalsIgnoreCase("SearchIssuesTest")) {
             return new Object[][]{
-                    {"Valid search", "windows/+label/:bug/+language/:python/+state/:open", "created", "asc", "application/vnd.github.symmetra-preview+json", 200}
+                    {"Valid search", "windows+label:bug+language:python+state/:open", "created", "asc", "application/vnd.github.symmetra-preview+json", 200}
             };
         }
         else if(testCase.equalsIgnoreCase("SearchUsersTest")) {
             return new Object[][]{
-                    {"Valid search", "tom/+repos/:/%3E42+followers/:/%3E1000", "", "", "application/vnd.github.v3.text-match+json", 200}
+                    //{"Valid search", "tom repos:>42 followers:>1000", "", "", "application/vnd.github.v3.text-match+json", 200}
+                    {"Valid search", "tom+repos:%3E42+followers:%3E1000", "", "", "application/vnd.github.v3.text-match+json", 200}
             };
         }
         else if(testCase.equalsIgnoreCase("SearchTopicsTest")) {
@@ -50,7 +51,7 @@ public class DataProviderClass {
         }
         else if(testCase.equalsIgnoreCase("TextMatchMetadataTest")) {
             return new Object[][]{
-                    {"Valid search", "windows/+label/:bug/+language/:python/+state/:open","created", "asc", "application/vnd.github.v3.text-match+json", 200}
+                    {"Valid search", "windows+label:bug+language:python+state:open","created", "asc", "application/vnd.github.v3.text-match+json", 200}
             };
         }
         else{

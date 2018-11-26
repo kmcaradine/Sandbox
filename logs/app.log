@@ -1,7 +1,84 @@
-[INFO ] 20181126-15:15:32 [main]  com.common_code.SharedCode - 
+[INFO ] 20181126-17:49:54 [main]  com.common_code.SharedCode - 
 ====================================================================================================
 ====> Test Case Name: 
 ====> Test Case Number: 
 ====> Method Name: Valid search
 ====================================================================================================
-[INFO ] 20181126-15:15:34 [main]  com.common_code.SharedCode - Response Status: 200
+[INFO ] 20181126-17:49:56 [main]  com.common_code.SharedCode - Response Status: 200
+[INFO ] 20181126-17:49:56 [main]  com.common_code.SharedCode - 
+====================================================================================================
+====> Test Case Name: 
+====> Test Case Number: 
+====> Method Name: Valid search
+====================================================================================================
+[INFO ] 20181126-17:49:57 [main]  com.common_code.SharedCode - Response Status: 200
+[INFO ] 20181126-17:49:57 [main]  com.common_code.SharedCode - 
+====================================================================================================
+====> Test Case Name: 
+====> Test Case Number: 
+====> Method Name: Valid search
+====================================================================================================
+[INFO ] 20181126-17:49:58 [main]  com.common_code.SharedCode - Response Status: 200
+[INFO ] 20181126-17:49:58 [main]  com.common_code.SharedCode - 
+====================================================================================================
+====> Test Case Name: 
+====> Test Case Number: 
+====> Method Name: Valid search
+====================================================================================================
+[INFO ] 20181126-17:49:58 [main]  com.common_code.SharedCode - Response Status: 200
+[INFO ] 20181126-17:49:58 [main]  com.common_code.SharedCode - 
+====================================================================================================
+====> Test Case Name: 
+====> Test Case Number: 
+====> Method Name: Valid data with forks
+====================================================================================================
+[INFO ] 20181126-17:49:59 [main]  com.common_code.SharedCode - Response Status: 200
+[INFO ] 20181126-17:49:59 [main]  com.common_code.SharedCode - 
+====================================================================================================
+====> Test Case Name: 
+====> Test Case Number: 
+====> Method Name: Valid data with stars
+====================================================================================================
+[INFO ] 20181126-17:50:00 [main]  com.common_code.SharedCode - Response Status: 200
+[INFO ] 20181126-17:50:00 [main]  com.common_code.SharedCode - 
+====================================================================================================
+====> Test Case Name: 
+====> Test Case Number: 
+====> Method Name: Valid data with update
+====================================================================================================
+[INFO ] 20181126-17:50:01 [main]  com.common_code.SharedCode - Response Status: 200
+[INFO ] 20181126-17:50:01 [main]  com.common_code.SharedCode - 
+====================================================================================================
+====> Test Case Name: 
+====> Test Case Number: 
+====> Method Name: No request language
+====================================================================================================
+[INFO ] 20181126-17:50:01 [main]  com.common_code.SharedCode - Response Status: 422
+[INFO ] 20181126-17:50:01 [main]  com.common_code.SharedCode - 
+====================================================================================================
+====> Test Case Name: 
+====> Test Case Number: 
+====> Method Name: Valid data query
+====================================================================================================
+[INFO ] 20181126-17:50:01 [main]  com.common_code.SharedCode - Response Status: 200
+[INFO ] 20181126-17:50:01 [main]  com.common_code.SharedCode - 
+====================================================================================================
+====> Test Case Name: 
+====> Test Case Number: 
+====> Method Name: Valid search
+====================================================================================================
+[INFO ] 20181126-17:50:02 [main]  com.common_code.SharedCode - Response Status: 200
+[INFO ] 20181126-17:50:02 [main]  com.common_code.SharedCode - 
+====================================================================================================
+====> Test Case Name: 
+====> Test Case Number: 
+====> Method Name: Valid search
+====================================================================================================
+[INFO ] 20181126-17:50:02 [main]  com.common_code.SharedCode - Response Status: 200
+[INFO ] 20181126-17:50:02 [main]  com.common_code.SharedCode - 
+====================================================================================================
+====> Test Case Name: 
+====> Test Case Number: 
+====> Method Name: Valid search
+====================================================================================================
+[INFO ] 20181126-17:50:03 [main]  com.common_code.SharedCode - Response Status: 200

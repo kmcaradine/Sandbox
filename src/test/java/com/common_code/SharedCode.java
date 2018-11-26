@@ -13,7 +13,13 @@ import org.apache.logging.log4j.Logger;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
+import javax.ws.rs.core.MediaType;
+
+import java.io.UnsupportedEncodingException;
+
 import static io.restassured.RestAssured.given;
+import static io.restassured.config.DecoderConfig.decoderConfig;
+import static io.restassured.config.EncoderConfig.encoderConfig;
 import static org.hamcrest.number.OrderingComparison.lessThanOrEqualTo;
 
 public class SharedCode {
@@ -61,6 +67,7 @@ public class SharedCode {
                 response =
                     given().
                         spec(requestSpec).
+                        contentType(MediaType.APPLICATION_JSON).
                         auth().
                             preemptive().
                             oauth2(accessToken).
@@ -122,6 +129,12 @@ public class SharedCode {
                 break;
         }
         return response;
+    }
+
+    public static String convertCharset(String q) throws UnsupportedEncodingException {
+
+        String result = java.net.URLDecoder.decode(q, "UTF-8");
+        return result;
     }
 
     public static void header(String testName){

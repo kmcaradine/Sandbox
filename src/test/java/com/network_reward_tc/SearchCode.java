@@ -12,6 +12,8 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
+import java.io.UnsupportedEncodingException;
+
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -29,7 +31,7 @@ public class SearchCode extends SharedCode {
     @Test(dataProvider="SearchProvider",
             dataProviderClass= DataProviderClass.class)
     public void SearchCodeTest(String tcName, String lang, String sort, String order,
-                               String acceptHeader, int requestStatus){
+                               String acceptHeader, int requestStatus) throws UnsupportedEncodingException {
         apiType = "get";
         testName = tcName;
 
@@ -56,7 +58,7 @@ public class SearchCode extends SharedCode {
             requestSpecBuilder.setAccept(acceptHeader);
         }
         if(lang.trim().length() > 0) {
-            requestSpecBuilder.addQueryParam("q", lang);
+            requestSpecBuilder.addQueryParam("q", convertCharset(lang));
         }
         if(sort.trim().length() > 0) {
             requestSpecBuilder.addQueryParam("sort", sort);
