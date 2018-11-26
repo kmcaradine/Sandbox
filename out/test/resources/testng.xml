@@ -4,7 +4,14 @@
 
     <test name="Test">
         <classes>
-            <class name="com.NetworkAPIs.SearchRepositories"/>
+            <class name="com.network_reward_tc.SearchCode"/>
+            <class name="com.network_reward_tc.SearchCommits"/>
+            <class name="com.network_reward_tc.SearchIssues"/>
+            <class name="com.network_reward_tc.SearchLabels"/>
+            <class name="com.network_reward_tc.SearchRepositories"/>
+            <class name="com.network_reward_tc.SearchTopics"/>
+            <class name="com.network_reward_tc.SearchUsers"/>
+            <class name="com.network_reward_tc.TextMatchMetaData"/>
         </classes>
     </test>
 </suite>

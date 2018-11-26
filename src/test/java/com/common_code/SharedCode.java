@@ -1,4 +1,4 @@
-package com.NetworkAPIs;
+package com.common_code;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -20,7 +20,7 @@ import static io.restassured.RestAssured.given;
 
 public class SharedCode {
 
-    static Logger log = LogManager.getLogger(SharedCode.class);
+    public static Logger log = LogManager.getLogger(SharedCode.class);
     private static Response response;
     private static final boolean PRINTERHEADER = true;
     public static ExtentHtmlReporter reporter;
@@ -47,7 +47,7 @@ public class SharedCode {
                 response =
                     given().
                         spec(requestSpec).
-                        contentType(MediaType.APPLICATION_JSON).
+                        //contentType(MediaType.APPLICATION_JSON).
                         //accept(MediaType.APPLICATION_JSON).
                         log().
                         all().
@@ -64,6 +64,9 @@ public class SharedCode {
                 response =
                     given().
                         spec(requestSpec).
+                        //auth().
+                            //preemptive().
+                            //oauth2("").
                         contentType(MediaType.APPLICATION_JSON).
                         log().
                         all().
@@ -80,8 +83,6 @@ public class SharedCode {
                 response =
                     given().
                         spec(requestSpec).
-                        contentType(MediaType.APPLICATION_JSON).
-                        //accept(MediaType.APPLICATION_JSON).
                         log().
                         all().
                     when().
@@ -97,8 +98,6 @@ public class SharedCode {
                 response =
                     given().
                         spec(requestSpec).
-                        contentType(MediaType.APPLICATION_JSON).
-                        //accept(MediaType.APPLICATION_JSON).
                         log().
                         all().
                     when().
@@ -114,8 +113,6 @@ public class SharedCode {
                 response =
                     given().
                         spec(requestSpec).
-                        contentType(MediaType.APPLICATION_JSON).
-                        //accept(MediaType.APPLICATION_JSON).
                         log().
                         all().
                     when().

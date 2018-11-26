@@ -1,25 +1,24 @@
-package com.NetworkAPIs;
+package com.network_reward_tc;
 
-import TestData.DataProviderClass;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-import io.restassured.RestAssured;
+import com.common_code.SharedCode;
+import com.test_data.DataProviderClass;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import org.apache.http.HttpStatus;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
-import static java.util.concurrent.TimeUnit.SECONDS;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.lessThanOrEqualTo;
 
-public class SearchRepositories extends SharedCode {
+public class SearchCommits extends SharedCode {
+
 
     private RequestSpecBuilder requestSpecBuilder ;
     private RequestSpecification requestSpec;
@@ -27,9 +26,9 @@ public class SearchRepositories extends SharedCode {
     private String apiType = "";
     private String testName = "";
 
-    @Test (dataProvider="SearchProvider",
-           dataProviderClass=DataProviderClass.class)
-    public void SearchRepositoriesTest(String tcName, String lang, String sort, String order,
+    @Test(dataProvider="SearchProvider",
+            dataProviderClass= DataProviderClass.class)
+    public void SearchCommitsTest(String tcName, String lang, String sort, String order,
                                        String acceptHeader, int requestStatus){
         apiType = "get";
         testName = tcName;
@@ -37,11 +36,11 @@ public class SearchRepositories extends SharedCode {
         //Print header to console
         header(testName);
 
-        test = extent.createTest(testName,"SearchRepositories");
+        test = extent.createTest(testName,"SearchCommits");
 
         //Set the Base URL and Base Path send it to the report
         String baseURI = "https://api.github.com";
-        String basePath = "/search/repositories";
+        String basePath = "/search/commits";
         test.log(Status.INFO, "Base URI: " + baseURI);
         test.log(Status.INFO, "Base Path: " + basePath);
 
@@ -61,6 +60,8 @@ public class SearchRepositories extends SharedCode {
         if(order.trim().length() > 0) {
             requestSpecBuilder.addQueryParam("order", order);
         }
+
+
         requestSpec = requestSpecBuilder.build();
 
         //Get API response

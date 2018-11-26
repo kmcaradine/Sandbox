@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5a7bfd3-5980-478b-91fd-4ce50d43d794" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/test_data/DataProviderClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/com/NetworkAPIs/SearchRepositories.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/com/NetworkAPIs/SearchRepositories.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/com/NetworkAPIs/SharedCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/com/NetworkAPIs/SharedCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/TestData/DataProviderClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/com/NetworkAPIs/SearchRepositories.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/com/NetworkAPIs/SharedCode.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/resources/test_automation_api.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/resources/test_automation_api.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/NetworkAPIs/SearchRepositories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/NetworkAPIs/SearchRepositories.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/NetworkAPIs/SharedCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/NetworkAPIs/SharedCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/resources/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/resources/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestData/DataProviderClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/NetworkAPIs/SearchRepositories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/network_reward_tc/SearchRepositories.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/NetworkAPIs/SharedCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/common_code/SharedCode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/test_automation_api.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test_automation_api.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testng.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -29,47 +34,48 @@
     <session id="-1252691262">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="10" />
+          <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="2" />
-          <entry key="gradle" value="6" />
-          <entry key="groovy" value="1" />
+          <entry key="class" value="7" />
+          <entry key="gradle" value="7" />
+          <entry key="groovy" value="3" />
           <entry key="html" value="2" />
-          <entry key="java" value="11" />
-          <entry key="xml" value="5" />
+          <entry key="java" value="47" />
+          <entry key="xml" value="8" />
           <entry key="xsl" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="2" />
-          <entry key="Groovy" value="7" />
+          <entry key="CLASS" value="7" />
+          <entry key="Groovy" value="10" />
           <entry key="HTML" value="2" />
-          <entry key="JAVA" value="11" />
-          <entry key="XML" value="6" />
+          <entry key="JAVA" value="47" />
+          <entry key="XML" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gradle" value="120" />
-          <entry key="java" value="2900" />
-          <entry key="xml" value="27" />
+          <entry key="java" value="3616" />
+          <entry key="xml" value="59" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="120" />
-          <entry key="JAVA" value="2900" />
-          <entry key="XML" value="27" />
+          <entry key="JAVA" value="3616" />
+          <entry key="XML" value="59" />
         </counts>
       </usages-collector>
     </session>
@@ -78,14 +84,26 @@
     <favorites_list name="rewarenetwork" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5197923">
+    <splitter split-orientation="horizontal" split-proportion="0.42975736">
       <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/test/java/com/NetworkAPIs/SearchRepositories.java">
+        <leaf>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/java/com/network_reward_tc/TextMatchMetaData.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="661">
-                  <caret line="81" column="62" selection-start-line="81" selection-start-column="62" selection-end-line="81" selection-end-column="62" />
+                <state relative-caret-position="520">
+                  <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/test/java/com/network_reward_tc/SearchLabels.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="408">
+                  <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -96,12 +114,12 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/java/com/NetworkAPIs/SharedCode.java">
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/test/java/com/test_data/DataProviderClass.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1625">
-                  <caret line="117" column="26" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
+                <state relative-caret-position="-17">
+                  <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -109,11 +127,23 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/test/java/TestData/DataProviderClass.java">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/java/com/common_code/SharedCode.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+                <state relative-caret-position="153">
+                  <caret line="71" column="30" lean-forward="true" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/java/com/network_reward_tc/SearchCommits.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1071">
+                  <caret line="63" selection-start-line="63" selection-end-line="63" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -508,14 +538,25 @@
         <option value="$PROJECT_DIR$/src/test/java/SharedCode.java" />
         <option value="$PROJECT_DIR$/testng.xsl" />
         <option value="$PROJECT_DIR$/testng.xml" />
-        <option value="$PROJECT_DIR$/src/test/resources/testng.xml" />
         <option value="$PROJECT_DIR$/src/test/java/NetworkAPIs/SearchRepositories.java" />
         <option value="$PROJECT_DIR$/src/test/java/NetworkAPIs/SharedCode.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/test/java/TestData/DataProvider.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/NetworkAPIs/SharedCode.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/NetworkAPIs/SearchRepositories.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/NetworkAPIs/SharedCode.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestData/DataProviderClass.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/network_reward/SearchRepositories.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/network_reward_tc/SearchCode.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/network_reward_tc/SearchIssues.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/network_reward_tc/SearchRepositories.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/network_reward_tc/SearchCommits.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/network_reward_tc/SearchUsers.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/testng.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/network_reward_tc/SearchTopics.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/network_reward_tc/SearchLabels.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/test_data/DataProviderClass.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/network_reward_tc/TextMatchMetaData.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/common_code/SharedCode.java" />
       </list>
     </option>
   </component>
@@ -530,8 +571,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -569,7 +608,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="NetworkAPIs" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rewarenetwork" type="b2602c69:ProjectViewProjectNode" />
@@ -577,7 +616,26 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="TestData" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="common_code" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rewarenetwork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Reward_Network" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="network_reward_tc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rewarenetwork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Reward_Network" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="test_data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="rewarenetwork" type="b2602c69:ProjectViewProjectNode" />
@@ -590,22 +648,24 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543027740723" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543196362859" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="project.validation" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Reward_Network\src\test\resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Reward_Network\src" />
       <recent name="C:\Reward_Network" />
-      <recent name="C:\Reward_Network\src\test\resources" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Reward_Network\src\test\resources" />
     </key>
   </component>
@@ -632,59 +692,65 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C:/Reward_Network/src/testng.xml" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="rewarenetwork" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/testng.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
+    <configuration name="SearchCommits" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="rewarenetwork_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.network_reward_tc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.network_reward_tc" />
+      <option name="MAIN_CLASS_NAME" value="com.network_reward_tc.SearchCommits" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchRepositories (1)" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchLabels" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="rewarenetwork_test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.NetworkAPIs.*" />
+          <option name="PATTERN" value="com.network_reward_tc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.NetworkAPIs" />
-      <option name="MAIN_CLASS_NAME" value="com.NetworkAPIs.SearchRepositories" />
+      <option name="PACKAGE_NAME" value="com.network_reward_tc" />
+      <option name="MAIN_CLASS_NAME" value="com.network_reward_tc.SearchLabels" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchRepositories" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TextMatchMetaData" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="rewarenetwork_test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="NetworkAPIs.*" />
+          <option name="PATTERN" value="com.network_reward_tc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="NetworkAPIs" />
-      <option name="MAIN_CLASS_NAME" value="NetworkAPIs.SearchRepositories" />
+      <option name="PACKAGE_NAME" value="com.network_reward_tc" />
+      <option name="MAIN_CLASS_NAME" value="com.network_reward_tc.TextMatchMetaData" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchRepositories.SearchRepositoriesTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TextMatchMetaData.TextMatchMetadataTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="rewarenetwork_test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.NetworkAPIs.*" />
+          <option name="PATTERN" value="com.network_reward_tc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.NetworkAPIs" />
-      <option name="MAIN_CLASS_NAME" value="com.NetworkAPIs.SearchRepositories" />
-      <option name="METHOD_NAME" value="SearchRepositoriesTest" />
+      <option name="PACKAGE_NAME" value="com.network_reward_tc" />
+      <option name="MAIN_CLASS_NAME" value="com.network_reward_tc.TextMatchMetaData" />
+      <option name="METHOD_NAME" value="TextMatchMetadataTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -693,19 +759,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="TestNG.SearchRepositories" />
+      <item itemvalue="TestNG.SearchLabels" />
+      <item itemvalue="TestNG.TextMatchMetaData" />
       <item itemvalue="TestNG.C:/Reward_Network/src/test/resources/testng.xml" />
-      <item itemvalue="TestNG.C:/Reward_Network/src/testng.xml" />
-      <item itemvalue="TestNG.SearchRepositories.SearchRepositoriesTest" />
-      <item itemvalue="TestNG.SearchRepositories (1)" />
+      <item itemvalue="TestNG.TextMatchMetaData.TextMatchMetadataTest" />
+      <item itemvalue="TestNG.SearchCommits" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.C:/Reward_Network/src/test/resources/testng.xml" />
-        <item itemvalue="TestNG.SearchRepositories.SearchRepositoriesTest" />
-        <item itemvalue="TestNG.SearchRepositories (1)" />
-        <item itemvalue="TestNG.C:/Reward_Network/src/testng.xml" />
-        <item itemvalue="TestNG.SearchRepositories" />
+        <item itemvalue="TestNG.SearchLabels" />
+        <item itemvalue="TestNG.TextMatchMetaData" />
+        <item itemvalue="TestNG.SearchCommits" />
+        <item itemvalue="TestNG.TextMatchMetaData.TextMatchMetadataTest" />
       </list>
     </recent_temporary>
   </component>
@@ -723,41 +789,41 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="C__Reward_Network_src_test_resources_testng_xml - 2018.11.23 at 20h 19m 46s.xml">
-      <configuration name="C:/Reward_Network/src/test/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="TextMatchMetaData - 2018.11.25 at 18h 39m 50s.xml">
+      <configuration name="TextMatchMetaData" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Reward_Network_src_test_resources_testng_xml - 2018.11.23 at 20h 21m 10s.xml">
-      <configuration name="C:/Reward_Network/src/test/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="TextMatchMetaData - 2018.11.25 at 18h 55m 56s.xml">
+      <configuration name="TextMatchMetaData" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Reward_Network_src_test_resources_testng_xml - 2018.11.23 at 20h 22m 58s.xml">
-      <configuration name="C:/Reward_Network/src/test/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="SearchCommits - 2018.11.25 at 18h 59m 24s.xml">
+      <configuration name="SearchCommits" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Reward_Network_src_test_resources_testng_xml - 2018.11.23 at 20h 23m 30s.xml">
-      <configuration name="C:/Reward_Network/src/test/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="TextMatchMetaData - 2018.11.25 at 19h 04m 31s.xml">
+      <configuration name="TextMatchMetaData" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Reward_Network_src_test_resources_testng_xml - 2018.11.23 at 20h 27m 16s.xml">
-      <configuration name="C:/Reward_Network/src/test/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="TextMatchMetaData - 2018.11.25 at 19h 14m 15s.xml">
+      <configuration name="TextMatchMetaData" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Reward_Network_src_test_resources_testng_xml - 2018.11.23 at 20h 38m 21s.xml">
-      <configuration name="C:/Reward_Network/src/test/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="TextMatchMetaData - 2018.11.25 at 19h 14m 56s.xml">
+      <configuration name="TextMatchMetaData" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Reward_Network_src_test_resources_testng_xml - 2018.11.23 at 20h 39m 31s.xml">
-      <configuration name="C:/Reward_Network/src/test/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="TextMatchMetaData - 2018.11.25 at 19h 18m 37s.xml">
+      <configuration name="TextMatchMetaData" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Reward_Network_src_test_resources_testng_xml - 2018.11.23 at 20h 40m 57s.xml">
-      <configuration name="C:/Reward_Network/src/test/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="TextMatchMetaData - 2018.11.25 at 19h 23m 50s.xml">
+      <configuration name="TextMatchMetaData" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Reward_Network_src_test_resources_testng_xml - 2018.11.23 at 20h 46m 26s.xml">
-      <configuration name="C:/Reward_Network/src/test/resources/testng.xml" configurationId="TestNG" />
+    <history-entry file="SearchLabels - 2018.11.25 at 19h 24m 28s.xml">
+      <configuration name="SearchLabels" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="C__Reward_Network_src_test_resources_testng_xml - 2018.11.23 at 20h 48m 58s.xml">
+    <history-entry file="C__Reward_Network_src_test_resources_testng_xml - 2018.11.25 at 19h 24m 53s.xml">
       <configuration name="C:/Reward_Network/src/test/resources/testng.xml" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989154" visible="true" weight="0.18017058" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989154" visible="true" weight="0.1652452" />
       <window_info id="Structure" order="1" sideWeight="0.5010846" side_tool="true" weight="0.14392324" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -765,9 +831,9 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" sideWeight="0.5010846" side_tool="true" weight="0.14392324" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" x="0" y="0" width="1280" height="660" id="Run" order="2" weight="0.22342733" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.46963122" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info anchor="bottom" x="0" y="0" width="1280" height="660" id="Run" order="2" weight="0.2516269" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.097613886" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -786,6 +852,36 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989154" visible="true" weight="0.21748401" />
+      <window_info id="Structure" order="1" sideWeight="0.5010846" side_tool="true" weight="0.14392324" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.5010846" side_tool="true" weight="0.14392324" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info anchor="bottom" x="0" y="0" width="1280" height="660" id="Run" order="2" visible="true" weight="0.30585682" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.46963122" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="10" weight="0.10737527" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.329718" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Gradle" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -797,72 +893,188 @@
     <entry file="file://$PROJECT_DIR$/src/test/resources/test_automation_api.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.rest-assured/rest-assured/3.2.0/ca16a0b5528a873430426ae5348fc218196bf84e/rest-assured-3.2.0-sources.jar!/io/restassured/internal/ResponseParserRegistrar.groovy">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy/2.4.15/74b7e0b99526c569e3a59cb84dbcc6204d601ee6/groovy-2.4.15.jar!/groovyjarjarasm/asm/ClassVisitor.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="170">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#267#268#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy/2.4.15/74b7e0b99526c569e3a59cb84dbcc6204d601ee6/groovy-2.4.15.jar!/groovyjarjarasm/asm/ByteVector.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
+          <folding>
+            <element signature="e#220#221#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy/2.4.15/74b7e0b99526c569e3a59cb84dbcc6204d601ee6/groovy-2.4.15.jar!/groovyjarjarasm/asm/Item.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy/2.4.15/74b7e0b99526c569e3a59cb84dbcc6204d601ee6/groovy-2.4.15.jar!/groovyjarjarasm/asm/ClassWriter.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8251">
-          <caret line="568" column="11" selection-start-line="568" selection-start-column="11" selection-end-line="568" selection-end-column="11" />
+        <state relative-caret-position="172">
+          <caret line="499" selection-start-line="499" selection-end-line="499" />
+          <folding>
+            <element signature="e#17920#17921#0" expanded="true" />
+            <element signature="e#17980#17981#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.groovy/groovy/2.4.15/74b7e0b99526c569e3a59cb84dbcc6204d601ee6/groovy-2.4.15.jar!/groovyjarjarasm/asm/ClassVisitor.class">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.rest-assured/rest-assured/3.2.0/ca16a0b5528a873430426ae5348fc218196bf84e/rest-assured-3.2.0-sources.jar!/io/restassured/internal/ResponseParserRegistrar.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+        <state relative-caret-position="90">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.rest-assured/rest-assured/3.2.0/ca16a0b5528a873430426ae5348fc218196bf84e/rest-assured-3.2.0-sources.jar!/io/restassured/builder/RequestSpecBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="1329" selection-start-line="1329" selection-end-line="1329" />
+          <folding>
+            <element signature="e#53826#53827#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.rest-assured/rest-assured/3.2.0/ca16a0b5528a873430426ae5348fc218196bf84e/rest-assured-3.2.0-sources.jar!/io/restassured/RestAssured.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
+        <state relative-caret-position="198">
           <caret line="1505" selection-start-line="1505" selection-end-line="1505" />
+          <folding>
+            <element signature="e#28138#28139#0" expanded="true" />
+            <element signature="e#28212#28213#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/testng.xml">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/network_reward_tc/SearchCode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="11" lean-forward="true" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
+        <state relative-caret-position="139">
+          <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/network_reward_tc/SearchIssues.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/network_reward_tc/SearchUsers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="2866" column="18" selection-start-line="2866" selection-start-column="18" selection-end-line="2866" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/network_reward_tc/SearchTopics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="44" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/network_reward_tc/SearchRepositories.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="880">
+          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="84" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="84" />
+        <state relative-caret-position="153">
+          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/NetworkAPIs/SharedCode.java">
+    <entry file="file://$PROJECT_DIR$/src/test/resources/testng.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1625">
-          <caret line="117" column="26" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
+        <state relative-caret-position="170">
+          <caret line="10" column="68" lean-forward="true" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/network_reward_tc/SearchCommits.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1071">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/NetworkAPIs/SearchRepositories.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/network_reward_tc/TextMatchMetaData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="661">
-          <caret line="81" column="62" selection-start-line="81" selection-start-column="62" selection-end-line="81" selection-end-column="62" />
+        <state relative-caret-position="520">
+          <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TestData/DataProviderClass.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/network_reward_tc/SearchLabels.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+        <state relative-caret-position="408">
+          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/common_code/SharedCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="71" column="30" lean-forward="true" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/test_data/DataProviderClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-17">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
