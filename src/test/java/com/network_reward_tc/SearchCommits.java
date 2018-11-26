@@ -60,8 +60,6 @@ public class SearchCommits extends SharedCode {
         if(order.trim().length() > 0) {
             requestSpecBuilder.addQueryParam("order", order);
         }
-
-
         requestSpec = requestSpecBuilder.build();
 
         //Get API response

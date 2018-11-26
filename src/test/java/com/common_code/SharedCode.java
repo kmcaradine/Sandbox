@@ -13,10 +13,8 @@ import org.apache.logging.log4j.Logger;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
-import javax.ws.rs.core.MediaType;
-
-import static org.hamcrest.number.OrderingComparison.lessThanOrEqualTo;
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.number.OrderingComparison.lessThanOrEqualTo;
 
 public class SharedCode {
 
@@ -42,13 +40,12 @@ public class SharedCode {
     public static Response getTheResponse(String apiType, RequestSpecification requestSpec){
         //API response time
         long responseTime = 3000L;
+        String accessToken = "0c86b0d3a469ea6880d8414826b7828047c203db";
         switch(apiType.toLowerCase()){
             case "post": //<-- Post
                 response =
                     given().
                         spec(requestSpec).
-                        //contentType(MediaType.APPLICATION_JSON).
-                        //accept(MediaType.APPLICATION_JSON).
                         log().
                         all().
                     when().
@@ -64,10 +61,9 @@ public class SharedCode {
                 response =
                     given().
                         spec(requestSpec).
-                        //auth().
-                            //preemptive().
-                            //oauth2("").
-                        contentType(MediaType.APPLICATION_JSON).
+                        auth().
+                            preemptive().
+                            oauth2(accessToken).
                         log().
                         all().
                     when().

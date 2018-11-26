@@ -36,6 +36,10 @@ public class SearchCode extends SharedCode {
         //Print header to console
         header(testName);
 
+
+        //String accessToken = "0c86b0d3a469ea6880d8414826b7828047c203db";
+        //RequestSpecification oauth2(accessToken);
+
         test = extent.createTest(testName,"SearchCommits");
 
         //Set the Base URL and Base Path send it to the report
@@ -60,6 +64,7 @@ public class SearchCode extends SharedCode {
         if(order.trim().length() > 0) {
             requestSpecBuilder.addQueryParam("order", order);
         }
+        //requestSpecBuilder.setAuth("0c86b0d3a469ea6880d8414826b7828047c203db");
         requestSpec = requestSpecBuilder.build();
 
         //Get API response
