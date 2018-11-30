@@ -5,6 +5,7 @@ import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.common_code.SharedCode;
 import com.test_data.DataProviderClass;
+import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -20,7 +21,6 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.lessThanOrEqualTo;
 
 public class SearchCode extends SharedCode {
-
 
     private RequestSpecBuilder requestSpecBuilder ;
     private RequestSpecification requestSpec;
@@ -38,21 +38,18 @@ public class SearchCode extends SharedCode {
         //Print header to console
         header(testName);
 
-
         //String accessToken = "0c86b0d3a469ea6880d8414826b7828047c203db";
         //RequestSpecification oauth2(accessToken);
 
         test = extent.createTest(testName,"SearchCommits");
 
         //Set the Base URL and Base Path send it to the report
-        String baseURI = "https://api.github.com";
         String basePath = "/search/code";
-        test.log(Status.INFO, "Base URI: " + baseURI);
+        test.log(Status.INFO, "Base URI: " +  RestAssured.baseURI);
         test.log(Status.INFO, "Base Path: " + basePath);
 
         //Build API request
         requestSpecBuilder = new RequestSpecBuilder();
-        requestSpecBuilder.setBaseUri(baseURI);
         requestSpecBuilder.setBasePath(basePath);
         if(acceptHeader.trim().length() > 0){
             requestSpecBuilder.setAccept(acceptHeader);
@@ -66,7 +63,7 @@ public class SearchCode extends SharedCode {
         if(order.trim().length() > 0) {
             requestSpecBuilder.addQueryParam("order", order);
         }
-        //requestSpecBuilder.setAuth("0c86b0d3a469ea6880d8414826b7828047c203db");
+
         requestSpec = requestSpecBuilder.build();
 
         //Get API response

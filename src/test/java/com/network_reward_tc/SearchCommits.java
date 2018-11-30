@@ -1,10 +1,9 @@
 package com.network_reward_tc;
 
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.markuputils.ExtentColor;
-import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.common_code.SharedCode;
 import com.test_data.DataProviderClass;
+import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -21,7 +20,6 @@ import static org.hamcrest.Matchers.lessThanOrEqualTo;
 
 public class SearchCommits extends SharedCode {
 
-
     private RequestSpecBuilder requestSpecBuilder ;
     private RequestSpecification requestSpec;
     private Response response;
@@ -32,6 +30,7 @@ public class SearchCommits extends SharedCode {
             dataProviderClass= DataProviderClass.class)
     public void SearchCommitsTest(String tcName, String lang, String sort, String order,
                                        String acceptHeader, int requestStatus) throws UnsupportedEncodingException {
+
         apiType = "get";
         testName = tcName;
 
@@ -41,14 +40,12 @@ public class SearchCommits extends SharedCode {
         test = extent.createTest(testName,"SearchCommits");
 
         //Set the Base URL and Base Path send it to the report
-        String baseURI = "https://api.github.com";
         String basePath = "/search/commits";
-        test.log(Status.INFO, "Base URI: " + baseURI);
+        test.log(Status.INFO, "Base URI: " + RestAssured.baseURI);
         test.log(Status.INFO, "Base Path: " + basePath);
 
         //Build API request
         requestSpecBuilder = new RequestSpecBuilder();
-        requestSpecBuilder.setBaseUri(baseURI);
         requestSpecBuilder.setBasePath(basePath);
         if(acceptHeader.trim().length() > 0){
             requestSpecBuilder.setAccept(acceptHeader);
@@ -85,17 +82,6 @@ public class SearchCommits extends SharedCode {
 
     @AfterMethod(alwaysRun = true)
     public void getResult(ITestResult result) {
-        //Check for pass, fail or skip test status after each test
-        if (result.getStatus() == ITestResult.SUCCESS) {
-            test.log(Status.PASS, MarkupHelper.createLabel(result.getName() + "Test Case PASSED", ExtentColor.GREEN));
-        }
-        else if (result.getStatus() == ITestResult.FAILURE) {
-            test.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + "Test Case FAIL", ExtentColor.RED));
-            test.fail(result.getThrowable());
-        }
-        else if (result.getStatus() == ITestResult.SKIP) {
-            test.log(Status.SKIP, MarkupHelper.createLabel(result.getName() + "Test Case SKIP", ExtentColor.YELLOW));
-            test.skip(result.getThrowable());
-        }
+        theResult(result);
     }
 }

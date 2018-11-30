@@ -2,24 +2,24 @@ package com.common_code;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import javax.ws.rs.core.MediaType;
-
 import java.io.UnsupportedEncodingException;
 
-import static io.restassured.RestAssured.given;
-import static io.restassured.config.DecoderConfig.decoderConfig;
-import static io.restassured.config.EncoderConfig.encoderConfig;
+import static io.restassured.RestAssured.*;
 import static org.hamcrest.number.OrderingComparison.lessThanOrEqualTo;
 
 public class SharedCode {
@@ -33,14 +33,15 @@ public class SharedCode {
 
     @BeforeSuite(alwaysRun = true)
     public void setUp(){
+        baseURI = "https://api.github.com";
         setUpReport();
     }
 
     @AfterSuite(alwaysRun = true)
     public void tearDown(){
-        //Send result to the Extent report
+        //Send final result to the Extent report
         extent.flush();
-        RestAssured.reset();
+        reset();
     }
 
     public static Response getTheResponse(String apiType, RequestSpecification requestSpec){
@@ -133,7 +134,7 @@ public class SharedCode {
 
     public static String convertCharset(String q) throws UnsupportedEncodingException {
 
-        String result = java.net.URLDecoder.decode(q, "UTF-8");
+        String result = java.net.URLDecoder.decode(q,"UTF-8");
         return result;
     }
 
@@ -165,5 +166,20 @@ public class SharedCode {
         reporter.config().setChartVisibilityOnOpen(true);
         reporter.config().setTestViewChartLocation(ChartLocation.TOP);
         reporter.config().setTheme(Theme.STANDARD);
+    }
+
+    public static void theResult(ITestResult result){
+        //Check for pass, fail or skip test status after each test
+        if (result.getStatus() == ITestResult.SUCCESS) {
+            test.log(Status.PASS, MarkupHelper.createLabel(result.getName() + "Test Case PASSED", ExtentColor.GREEN));
+        }
+        else if (result.getStatus() == ITestResult.FAILURE) {
+            test.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + "Test Case FAIL", ExtentColor.RED));
+            test.fail(result.getThrowable());
+        }
+        else if (result.getStatus() == ITestResult.SKIP) {
+            test.log(Status.SKIP, MarkupHelper.createLabel(result.getName() + "Test Case SKIP", ExtentColor.YELLOW));
+            test.skip(result.getThrowable());
+        }
     }
 }
